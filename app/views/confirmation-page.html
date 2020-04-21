@@ -1,4 +1,4 @@
-{% set pageTitle = "We have recieved your details" %}
+{% set pageTitle = "We have received your details" %}
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% extends "includes/layout.html" %}
@@ -10,6 +10,7 @@
       <div class="nhsuk-panel nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4 app-panel--green">
         <h1 class="nhsuk-heading-l">{{pageTitle}}</h1>
         <p>Thank you {{ data['first-name'] }} {{ data['last-name'] }}</p>
+        <p>We will send you a text message with a link to book an appointment within the next 48 hours.</p>
       </div>
 
       <div class="nhsuk-care-card nhsuk-care-card--urgent">
@@ -19,14 +20,17 @@
         </div>
         <div class="nhsuk-care-card__content">  
 
-          <p>...</p>
+          <p>If you get symptoms of coronavirus, or if your symptoms get worse, get advice from:</p>
+          <ul>
+            <li>England: <a href="https://111.nhs.uk/covid-19">NHS 111 online coronavirus service</a></li>
+            <li>Scotland: <a href="https://www.nhsinform.scot/illnesses-and-conditions/infections-and-poisoning/coronavirus-covid-19">NHS inform</a></li>
+            <li>Wales: <a href="https://www.nhsdirect.wales.nhs.uk/SelfAssessments/symptomcheckers/COVID19.aspx">NHS Direct Wales</a></li>
+            <li>Northern Ireland: <a href="https://www.publichealth.hscni.net/news/covid-19-what-situation-northern-ireland">Public Health Agency</a></li>
+          </ul>
 
         </div>
       </div>
 
-      <h2 class="nhsuk-heading-m">Heading</h2>
-      <p>...</p>      
-      
     </div>
   </div>
 {% endblock %}
