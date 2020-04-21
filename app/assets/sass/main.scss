@@ -10,3 +10,49 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
+
+.nhsuk-back-link {
+  @include nhsuk-responsive-padding(4, 'top');
+  margin-bottom: 0;
+}
+
+/* CONFIRMATION */
+
+.app-panel--green {
+  background-color: #007f3b; 
+  color: #ffffff;
+}
+
+/* LISTS */
+
+.app-u-nested-list {
+  margin-bottom: 0;
+}
+
+.app-u-nested-list > li {
+  @include nhsuk-responsive-margin(2, 'top');
+}
+
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+.app-cookies-footer {
+  background-color: $color_nhsuk-grey-4;
+}
+
+.app-cookies-footer--text {
+  @include nhsuk-font(16);
+  @include nhsuk-responsive-padding(5, 'bottom');
+
+  color: $color_nhsuk-grey-1;
+  margin-bottom: 0;
+  padding-bottom: nhsuk-spacing(4);
+
+  svg {
+    margin-right: nhsuk-spacing(2);
+    position: relative;
+    top: 2px;
+  }
+
+}
