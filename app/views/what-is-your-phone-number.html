@@ -30,7 +30,7 @@
           <span class="nhsuk-hint" id="telephone-hint">
             We need your mobile phone number to send you a text message with a link to book an appointment.
           </span>
-          <input class="nhsuk-input nhsuk-input--width-10" id="telephone" name="telephone" type="text" aria-describedby="telephone-hint" value="{{ data['telephone'] }}">
+          <input class="nhsuk-input nhsuk-input--width-10" id="telephone" name="telephone" type="text" aria-describedby="telephone-hint" pattern="[0-9]*" inputmode="numeric" spellcheck="false" value="{{ data['telephone'] }}">
         </div>
 
         <button class="nhsuk-button" type="submit">
