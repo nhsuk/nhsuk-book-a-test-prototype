@@ -12,7 +12,7 @@ router.post('/action/test-kit-type', function (req, res) {
   else if (testKit == "By requesting a home test kit"){
     res.redirect('https://www.gov.uk')
   } else {
-    res.redirect('/test-kit-type?error')
+    res.redirect('/test-centre')
   }
 
 })
