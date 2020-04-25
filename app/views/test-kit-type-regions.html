@@ -1,11 +1,11 @@
-{% set pageTitle = "How do you want to get the coronavirus test?" %}
+{% set pageTitle = "Where do you want to book a test?" %}
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% extends "includes/layout.html" %}
 
 {% block backLink %}
 <div class="nhsuk-back-link">
-  <a class="nhsuk-back-link__link" href="/">
+  <a class="nhsuk-back-link__link" href="/test-kit-type">
     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
     </svg>
@@ -19,134 +19,75 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form method="post" action="/action/test-kit-type">
+      <form method="post" action="/test-centre">
 
         <div class="nhsuk-form-group">
 
-          <fieldset class="nhsuk-fieldset">
+          <fieldset class="nhsuk-fieldset" aria-describedby="test-kit-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
                 {{ pageTitle }}
               </h1>
             </legend>
 
+            <span class="nhsuk-hint" id="test-kit-hint">
+               You or someone you live with must have a car to get to a local test centre
+            </span>
+
             <div class="nhsuk-radios">
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-home" name="test-kit" type="radio" value="By requesting a home test kit" aria-describedby="test-kit-home-hint">
-                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-home">
-                  By requesting a home test kit <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
-                </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-home-hint">
-                  You can ask for a kit for yourself and anyone else you live with who has coronavirus symptoms. This service is on the GOV.UK website. There is an identity check for home test kits.
-                </span>
-              </div>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-east-midlands" name="test-kit" type="radio" value="By visiting a regional test site in the East Midlands" aria-describedby="test-kit-drive-through-east-midlands-hint" disabled>
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-east-midlands" name="test-kit" type="radio" value="East Midlands" aria-describedby="test-kit-drive-through-east-midlands-hint" disabled>
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-east-midlands">
-                 By visiting a regional test site in the East Midlands <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
+                  East Midlands <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
                 </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-east-midlands-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
               </div>
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-east-of-england" name="test-kit" type="radio" value="By visiting a regional test site in the East of England" aria-describedby="test-kit-drive-through-east-of-england-hint">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-east-of-england" name="test-kit" type="radio" value="East of England" aria-describedby="test-kit-drive-through-east-of-england-hint">
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-east-of-england">
-                 By visiting a regional test site in the East of England <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                  East of England <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
                 </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-east-of-england-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
               </div>
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-london" name="test-kit" type="radio" value="By visiting a regional test site in London" aria-describedby="test-kit-drive-through-london-hint">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-london" name="test-kit" type="radio" value="London" aria-describedby="test-kit-drive-through-london-hint">
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-london">
-                 By visiting a regional test site in London	<strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                 London	<strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
                 </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-london-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
               </div>
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-north-east" name="test-kit" type="radio" value="By visiting a regional test site in the North East" aria-describedby="test-kit-drive-through-north-east-hint">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-north-east" name="test-kit" type="radio" value="North East" aria-describedby="test-kit-drive-through-north-east-hint">
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-north-east">
-                 By visiting a regional test site in the North East <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                 North East <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
                 </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-north-east-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
               </div>
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-north-west" name="test-kit" type="radio" value="By visiting a regional test site in the North West" aria-describedby="test-kit-drive-through-north-west-hint">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-north-west" name="test-kit" type="radio" value="North West" aria-describedby="test-kit-drive-through-north-west-hint">
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-north-west">
-                 By visiting a regional test site in the North West <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                 North West <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
                 </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-north-west-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
               </div>
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-south-east" name="test-kit" type="radio" value="By visiting a regional test site in the South East" aria-describedby="test-kit-drive-through-south-east-hint" disabled>
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-south-east" name="test-kit" type="radio" value="South East" aria-describedby="test-kit-drive-through-south-east-hint" disabled>
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-south-east">
-                 By visiting a regional test site in the South East <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
+                 South East <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
                 </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-south-east-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
               </div>
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-south-west" name="test-kit" type="radio" value="By visiting a regional test site in the South West" aria-describedby="test-kit-drive-through-south-west-hint" disabled>
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-south-west" name="test-kit" type="radio" value="South West" aria-describedby="test-kit-drive-through-south-west-hint" disabled>
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-south-west">
-                 By visiting a regional test site in the South West <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
+                 South West <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
                 </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-south-west-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
               </div>
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-west-midlands" name="test-kit" type="radio" value="By visiting a regional test site in the West Midlands" aria-describedby="test-kit-drive-through-west-midlands-hint">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-west-midlands" name="test-kit" type="radio" value="West Midlands" aria-describedby="test-kit-drive-through-west-midlands-hint">
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-west-midlands">
-                 By visiting a regional test site in the West Midlands <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                 West Midlands <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
                 </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-west-midlands-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
               </div>
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-yorkshire-and-the-humber" name="test-kit" type="radio" value="By visiting a regional test site in the Yorkshire and the Humber" aria-describedby="test-kit-drive-through-yorkshire-and-the-humber-hint">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-yorkshire-and-the-humber" name="test-kit" type="radio" value="Yorkshire and the Humber" aria-describedby="test-kit-drive-through-yorkshire-and-the-humber-hint">
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-yorkshire-and-the-humber">
-                 By visiting a regional test site in the Yorkshire and the Humber <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                 Yorkshire and the Humber <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
                 </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-yorkshire-and-the-humber-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
-              </div>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-scotland" name="test-kit" type="radio" value="By visiting a regional test site in Scotland" aria-describedby="test-kit-drive-through-scotland-hint">
-                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-scotland">
-                 By visiting a regional test site in Scotland <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
-                </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-scotland-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
-              </div>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-wales" name="test-kit" type="radio" value="By visiting a regional test site in Wales" aria-describedby="test-kit-drive-through-wales-hint" disabled>
-                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-wales">
-                 By visiting a regional test site in Wales <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
-                </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-wales-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
-              </div>
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-northern-ireland" name="test-kit" type="radio" value="By visiting a regional test site in Northern Ireland" aria-describedby="test-kit-drive-through-northern-ireland-hint">
-                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-northern-ireland">
-                 By visiting a regional test site in Northern Ireland <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
-                </label>
-                <span class="nhsuk-hint nhsuk-radios__hint" id="test-kit-drive-through-northern-ireland-hint">
-                  You or someone you live with must have a car to get to a local test centre
-                </span>
               </div>
             </div>
           </fieldset>
