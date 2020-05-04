@@ -29,4 +29,19 @@ router.post('/v2/action/test-kit-type', function (req, res) {
 
 })
 
+// Version 3 - Test kit type routing (Wales)
+
+router.post('/v3/action/test-kit-type', function (req, res) {
+  var testKit = req.session.data['test-kit']
+  
+  if (testKit == "England"){
+    res.redirect('/v3/test-kit-type-regions')
+  } else if (testKit == "Request a home test kit"){
+    res.redirect('https://www.gov.uk')
+  } else {
+    res.redirect('/v3/test-centre')
+  }
+
+})
+
 module.exports = router;
