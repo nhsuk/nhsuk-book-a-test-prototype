@@ -3,13 +3,13 @@ const express = require('express');
 const router = express.Router();
 
 // Version 1 - Test kit type routing (Country)
-router.post('/action/test-kit-type', function (req, res) {
+router.post('/v1/action/test-kit-type', function (req, res) {
   var testKit = req.session.data['test-kit']
 
   if (testKit == "Request a home test kit"){
     res.redirect('https://www.gov.uk')
   } else {
-    res.redirect('/test-centre')
+    res.redirect('/v1/test-centre')
   }
 
 })
