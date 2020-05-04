@@ -1,0 +1,106 @@
+{% set pageTitle = "Where do you want to book a test?" %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+{% set version = "v3" %}
+
+{% extends "includes/layout.html" %}
+
+{% block backLink %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/{{version}}/test-kit-type">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back
+  </a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form method="post" action="/{{version}}/test-centre">
+
+        <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="test-kit-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                {{ pageTitle }}
+              </h1>
+            </legend>
+
+            <span class="nhsuk-hint" id="test-kit-hint">
+               You or someone you live with must have a car to get to a local test centre
+            </span>
+
+            <div class="nhsuk-radios">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-east-midlands" name="test-kit" type="radio" value="East Midlands" aria-describedby="test-kit-drive-through-east-midlands-hint" disabled>
+                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-east-midlands">
+                  East Midlands <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-east-of-england" name="test-kit" type="radio" value="East of England" aria-describedby="test-kit-drive-through-east-of-england-hint">
+                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-east-of-england">
+                  East of England <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-london" name="test-kit" type="radio" value="London" aria-describedby="test-kit-drive-through-london-hint">
+                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-london">
+                 London	<strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-north-east" name="test-kit" type="radio" value="North East" aria-describedby="test-kit-drive-through-north-east-hint">
+                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-north-east">
+                 North East <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-north-west" name="test-kit" type="radio" value="North West" aria-describedby="test-kit-drive-through-north-west-hint">
+                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-north-west">
+                 North West <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-south-east" name="test-kit" type="radio" value="South East" aria-describedby="test-kit-drive-through-south-east-hint" disabled>
+                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-south-east">
+                 South East <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-south-west" name="test-kit" type="radio" value="South West" aria-describedby="test-kit-drive-through-south-west-hint" disabled>
+                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-south-west">
+                 South West <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-west-midlands" name="test-kit" type="radio" value="West Midlands" aria-describedby="test-kit-drive-through-west-midlands-hint">
+                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-west-midlands">
+                 West Midlands <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-yorkshire-and-the-humber" name="test-kit" type="radio" value="Yorkshire and the Humber" aria-describedby="test-kit-drive-through-yorkshire-and-the-humber-hint">
+                <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-yorkshire-and-the-humber">
+                 Yorkshire and the Humber <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+        </div>
+
+        <button class="nhsuk-button" type="submit">
+          Continue
+        </button>
+
+      </form>
+
+    </div>  
+  </div>
+{% endblock %}
