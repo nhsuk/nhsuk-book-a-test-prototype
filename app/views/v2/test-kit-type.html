@@ -24,7 +24,7 @@
 
         <div class="nhsuk-form-group">
 
-          <fieldset class="nhsuk-fieldset" aria-describedby="test-kit-hint">
+          <fieldset class="nhsuk-fieldset" aria-describedby="test-kit-hint test-kit-hint-select">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
                 {{ pageTitle }}
@@ -32,32 +32,36 @@
             </legend>
 
             <span class="nhsuk-hint" id="test-kit-hint">
-              For a drive-through test, you or someone you live with must have a car to get to a regional test centre. Select your country or ask for a home test kit.
+              For a drive-through test, you or someone you live with must have a car to get to a regional test site.
+            </span>
+
+            <span class="nhsuk-hint" id="test-kit-hint-select">
+              Select your country or ask for a home test kit.
             </span>
 
             <div class="nhsuk-radios">
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="test-kit-drive-through-england" name="test-kit" type="radio" value="England">
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-england">
-                 England <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                 Test sites in England <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
                 </label>
               </div>
               <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="test-kit-drive-through-scotland" name="test-kit" type="radio" value="Scotland">
+                <input class="nhsuk-radios__input" id="test-kit-drive-through-scotland" name="test-kit" type="radio" value="Scotland" disabled>
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-scotland">
-                 Scotland <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                 Test sites in Scotland <strong class="nhsuk-tag nhsuk-tag--green">None available</strong>
                 </label>
               </div>
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="test-kit-drive-through-wales" name="test-kit" type="radio" value="Wales" disabled>
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-wales">
-                 Wales <strong class="nhsuk-tag nhsuk-tag--red">None available</strong>
+                 Test sites in Wales <strong class="nhsuk-tag nhsuk-tag--green">None available</strong>
                 </label>
               </div>
               <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="test-kit-drive-through-northern-ireland" name="test-kit" type="radio" value="Northern Ireland">
                 <label class="nhsuk-label nhsuk-radios__label" for="test-kit-drive-through-northern-ireland">
-                 Northern Ireland <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+                 Test sites in Northern Ireland <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
                 </label>
               </div>
               <div class="nhsuk-radios__divider app-radios__divider--hint">or</div>
