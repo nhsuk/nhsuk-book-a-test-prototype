@@ -1,0 +1,40 @@
+{% set pageTitle = "We have received your details" %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% extends "includes/layout.html" %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-panel nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-4 app-panel--green">
+        <h1 class="nhsuk-heading-l">{{pageTitle}}</h1>
+        <p>We will send you a text message to tell you how to book your appointment. It may take several hours at busy times.</p>
+      </div>
+      <p>The message will include a link to a website that has more information about drive-through tests.</p>
+      <p>We cannot guarantee that you will get an appointment. If not, please try again tomorrow.</p>
+      
+      <h2>What to do in the meantime</h2>
+      <p>Do not leave your home if you or someone you live with has symptoms.</p>
+      <p>Read more about <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/what-to-do-if-you-or-someone-you-live-with-has-coronavirus-symptoms/staying-at-home-if-you-or-someone-you-live-with-has-coronavirus-symptoms/">self-isolation if you or someone you live with has symptoms</a> on the NHS website.</p>
+
+      <div class="nhsuk-care-card nhsuk-care-card--urgent">
+        <div class="nhsuk-care-card__heading-container">
+          <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Urgent advice: </span>If you need medical advice about your symptoms, go to:</span></h3>
+          <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+        </div>
+        <div class="nhsuk-care-card__content">  
+
+          <ul>
+            <li>England: <a href="https://111.nhs.uk/covid-19">NHS 111 online coronavirus service</a></li>
+            <li>Scotland: <a href="https://www.nhsinform.scot/illnesses-and-conditions/infections-and-poisoning/coronavirus-covid-19">NHS inform</a></li>
+            <li>Wales: <a href="https://www.nhsdirect.wales.nhs.uk/SelfAssessments/symptomcheckers/COVID19.aspx">NHS Direct Wales</a></li>
+            <li>Northern Ireland: get advice from a GP or GP out-of-hours service</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+{% endblock %}

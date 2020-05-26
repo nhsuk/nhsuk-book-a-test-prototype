@@ -16,7 +16,7 @@
 // Confirmation panel
 
 .app-panel--green {
-  background-color: #007f3b; 
+  background-color: #007f3b;
   color: #ffffff;
 }
 
@@ -24,4 +24,10 @@
 
 .app-radios__divider--hint {
   margin-bottom: 16px;
+}
+
+
+// Tag margin
+.nhsuk-radios__label .nhsuk-tag {
+    margin-left: 6px;
 }
