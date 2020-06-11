@@ -57,16 +57,4 @@ router.post('/v4/action/test-kit-type', function (req, res) {
 
 })
 
-// Version 5 - Content changes
-router.post('/v5/action/test-kit-type', function (req, res) {
-  var testKit = req.session.data['test-kit']
-
-  if (testKit == "Request a home test kit"){
-    res.redirect('https://covid-a11y.herokuapp.com/home-test-ordering/start')
-  } else {
-    res.redirect('/v5/test-centre')
-  }
-
-})
-
 module.exports = router;
