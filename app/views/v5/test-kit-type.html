@@ -1,0 +1,55 @@
+{% set pageTitle = "What tests are available" %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+{% set version = "v5" %}
+
+{% extends "includes/layout.html" %}
+
+{% block backLink %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/{{version}}">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back
+  </a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+      <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-l">{{ pageTitle }}</h1>
+     <p>There are 2 ways to get a coronavirus test: at a test site or getting a test kit delivered to your home.</p>
+    <p>You'll be able to choose which one you want later.</p>
+
+      <h2 class="nhsuk-heading-m">Test sites</h2>
+      <h3 class="nhsuk-heading-s">England</h3>
+      <p>East Midlands <strong class="nhsuk-tag nhsuk-tag--red">None available</strong></p>
+      <p>East of England <strong class="nhsuk-tag nhsuk-tag--green">Available</strong></p>
+      <p>London	<strong class="nhsuk-tag nhsuk-tag--green">Available</strong></p>
+      <p>North East <strong class="nhsuk-tag nhsuk-tag--green">Available</strong></p>
+      <p>North West <strong class="nhsuk-tag nhsuk-tag--green">Available</strong></p>
+      <p>South East <strong class="nhsuk-tag nhsuk-tag--red">None available</strong></p>
+      <p>South West <strong class="nhsuk-tag nhsuk-tag--red">None available</strong></p>
+      <p>West Midlands <strong class="nhsuk-tag nhsuk-tag--green">Available</strong></p>
+      <p>Yorkshire and the Humber <strong class="nhsuk-tag nhsuk-tag--green">Available</strong>
+     
+      <h3 class="nhsuk-heading-s">Scotland <strong class="nhsuk-tag nhsuk-tag--green">Available</strong></h3>
+      <h3 class="nhsuk-heading-s">Wales <strong class="nhsuk-tag nhsuk-tag--red">None available</strong></h3>
+      <h3 class="nhsuk-heading-s">Northern Ireland <strong class="nhsuk-tag nhsuk-tag--green">Available</strong></h3>
+      
+      <h2 class="nhsuk-heading-m">Home tests</h2>
+      <p>Test kit delivered to you <strong class="nhsuk-tag nhsuk-tag--green">Available</strong> CHECK POSITIONING</p>
+      
+
+        <a class="nhsuk-button" href="/{{version}}/what-is-your-name">Continue</a>
+
+        <h2 class="nhsuk-heading-m">If there are none available CHECK</h2>
+        <p>We are experiencing high demand. If the type of test you would like is not available, please try again later.</p>
+
+
+    </div>
+  </div>
+{% endblock %}
