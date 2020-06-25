@@ -1,0 +1,267 @@
+{% set pageTitle = "Get a free NHS test to check if you have coronavirus now" %}
+{% set version = "v5" %}
+
+{% extends "includes/layout.html" %}
+
+{% block header %}
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container">
+    <div class="nhsuk-header__logo"><a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+        <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
+          <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
+          <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+          <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
+        </svg>
+      </a>
+    </div>
+
+    <div class="nhsuk-header__content" id="content-header">
+
+      <div class="nhsuk-header__menu">
+        <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-label="Open menu">Menu</button>
+      </div>
+
+      <div class="nhsuk-header__search">
+        <button class="nhsuk-header__search-toggle" id="toggle-search" aria-controls="search" aria-label="Open search">
+          <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+          </svg>
+          <span class="nhsuk-u-visually-hidden">Search</span>
+        </button>
+        <div class="nhsuk-header__search-wrap" id="wrap-search">
+          <form class="nhsuk-header__search-form" id="search" action="https://www.nhs.uk/search/" method="get" role="search">
+            <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
+            <div class="autocomplete-container" id="autocomplete-container"></div>
+            <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off">
+            <button class="nhsuk-search__submit" type="submit">
+              <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Search</span>
+            </button>
+            <button class="nhsuk-search__close" id="close-search">
+              <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Close search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+    <div class="nhsuk-width-container">
+      <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+        <button class="nhsuk-header__navigation-close" id="close-menu">
+          <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+          </svg>
+          <span class="nhsuk-u-visually-hidden">Close menu</span>
+        </button>
+      </p>
+      <ul class="nhsuk-header__navigation-list">
+        <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+          <a class="nhsuk-header__navigation-link" href="/">
+            Home
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/conditions">
+            Health A-Z
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/live-well/">
+            Live Well
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/conditions/social-care-and-support/">
+            Care and support
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/news/">
+            Health news
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="https://www.nhs.uk/service-search">
+            Services near you
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="https://www.nhs.uk">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="https://www.nhs.uk/conditions/">Health A to Z</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="https://www.nhs.uk/conditions/">Health A to Z</a></p>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>{{ pageTitle }}</h1>
+      <p>Anyone who has symptoms of coronavirus (COVID-19) can get a free test to check if they have the virus. Some people without symptoms can have the test too. This test is called the "antigen" or "swab" test.</p>
+      <p>There is another type of test (antibody test) that checks if you've already had the virus. This test is not widely available yet. You can <a href="https://www.gov.uk/government/publications/coronavirus-covid-19-antibody-tests">find out about antibody testing on GOV.UK</a>.</p>
+       <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+      <p>If you need medical advice about your symptoms, go to:</p>
+      <ul>
+         <li>England: <a href="https://111.nhs.uk/covid-19/">NHS 111 online coronavirus service</a>
+          <li>Scotland: <a href="https://www.nhsinform.scot/illnesses-and-conditions/infections-and-poisoning/coronavirus-covid-19">NHS inform</a></li>
+          <li>Wales: <a href="https://www.nhsdirect.wales.nhs.uk/SelfAssessments/symptomcheckers/COVID19.aspx">NHS Direct Wales</a></li>
+        <li>Northern Ireland: get advice from a GP or GP out-of-hours service</li>
+         </ul>
+      </div>
+      <h2>Who can get a test</h2>
+    
+      <p>You can get a test:</p>
+      <ul>
+        <li>for yourself, if you have coronavirus symptoms now (a high temperature, a new, continuous cough, or a loss or change to your sense of smell or taste)</li>
+        <li>for someone you live with, if they have coronavirus symptoms</li>
+        <li>if you have been told to have a test before you go into hospital, for example, for surgery</li>
+      </ul>
+        
+      <p>You can get 1 test for each person with symptoms or one for yourself if your hospital tells you that you need it.</p>
+      <p>This service is for people in England, Scotland, Wales, and Northern Ireland.</p>
+      <p>In England and Wales, you can get a test for a child who lives with you, whatever their age. In Scotland and Northern Ireland, you can only get a test for your child if they are aged 5 or over.</p>
+    
+      <p>If you're applying for a test for someone else, and the person is aged 13 or over, check they're happy for you to get a test for them.</p>
+      
+      <h2>What the test involves</h2>
+      <p>The test usually involves taking a swab of the inside of your nose and the back of your throat, using a long cotton bud.</p>
+      
+      <p>You can do the swab yourself (if you are aged 12 or over) or someone can do it for you. Children aged 11 or under cannot do the swab themselves. Their parent or guardian will have to swab test them.</p>
+      <p>There are 2 ways of getting a test. You can:</p>
+      <ul>
+        <li>book an appointment at a drive-through or walk-through test site</li>
+        <li>ask for a home test kit - this will be delivered to your home</li>
+      </ul>
+    
+      <h2>When to apply for a test</h2>
+      <p>You need to get the test done in the first 5 days of having symptoms.</p>
+      <p>If you do not have symptoms, you can only get a test if your hospital has told you to.</p>
+      <div class="nhsuk-warning-callout">
+      <h3 class="nhsuk-warning-callout__label">Do not wait</h3>
+      <p>Apply for the test as soon as you have symptoms.</p>
+      </div>
+      <div class="nhsuk-table-responsive">
+  <table class="nhsuk-table">
+    <caption class="nhsuk-table__caption">Tests available in the first 5 days of symptoms</caption>
+    <thead class="nhsuk-table__head">
+      <tr class="nhsuk-table__row">
+        <th class="nhsuk-table__header" scope="col">Days since symptoms started</th>
+        <th class="nhsuk-table__header" scope="col">What you can order</th>
+      </tr>
+    </thead>
+    <tbody class="nhsuk-table__body">
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Days 1 to 4</td>
+        <td class="nhsuk-table__cell ">Book a drive-through or walk-through test at a test site or order a home test kit.<br> Order the kit by 3pm on day 4 to make sure you can do the test in the first 5 days.</td>
+      </tr>
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Day 5</td>
+        <td class="nhsuk-table__cell ">Book a test at a test site.<br> It's too late to order a home test kit.</td>
+      </tr>
+      <tr class="nhsuk-table__row">
+        <td class="nhsuk-table__cell">Day 6 onwards</td>
+        <td class="nhsuk-table__cell ">It's too late for an antigen test.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+      <h2>How do I get a test?</h2>
+      <p>You can apply for a test online.</p>
+      <p>We'll ask you:</p>
+      <ul>       
+        <li>how you want to get the test – at a drive-through or walk-through test site or by ordering a home test kit</li>
+        <li>for details such as your name, mobile phone number and address</li>
+      </ul>
+
+      <div class="nhsuk-action-link">
+        <a class="nhsuk-action-link__link" href="/{{version}}/test-kit-type">
+          <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+          </svg>
+          <span class="nhsuk-action-link__text">{{ serviceName }}</span>
+        </a>
+      </div>
+      <p>This service is for everyone.</p>
+      
+      <p>Some people can get priority tests on GOV.UK. <a href="https://www.gov.uk/coronavirus">Go to GOV.UK</a> if you:</p>
+        <ul>
+          <li>are an essential worker, including NHS or social care staff</li>
+          <li>are applying for tests for the residents and staff of your care home</li>
+          <li>have a verification code from your employer</li>
+      </ul>
+ 
+          <h2>Help with getting a test</h2>
+          <p>If you're having problems getting a test, see <a href="https://www.nhs.uk/contact-us/get-help-with-asking-for-a-coronavirus-test/">answers to common questions about asking for a coronavirus test.</a></p>
+      <div class="nhsuk-review-date">
+        <p class="nhsuk-body-s">
+          Page last reviewed: 24 June 2020<br>
+          Next review due: 6 July 2020
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/nhs-sites/">NHS sites</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/about-us/">About us</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/contact-us/">Contact us</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/personalisation/login.aspx">Profile editor login</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/about-us/sitemap/">Sitemap</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/accessibility/">Accessibility</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/our-policies/">Our policies</a></li>
+        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://www.nhs.uk/our-policies/cookies-policy/">Cookies</a></li>
+      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}
